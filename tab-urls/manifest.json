@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "TabURLs",
+  "short_name": "Tab URLs",
+  "version": "0.0.1",
+  "description" : "Shows URLs for all open tabs.",
+  "permissions": [ "activeTab", "tabs" ],
+  "browser_action": {
+     "default_popup": "index.html"
+  },
+  "manifest_version": 2
+}
