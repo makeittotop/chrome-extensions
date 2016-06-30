@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Unblock-HT",
+  "short_name": "Unblock-HT",
+  "description": "",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "storage"
+   ],
+   
+  "background": {
+    "persistent": false,
+    "scripts": ["jquery-1.11.3.min.js","background.js"]
+  },
+  
+  "content_scripts": [{
+      "matches":    ["*://*/*"],
+      "js":         ["main.js"],
+      "run_at": "document_end",
+      "all_frames": true
+  }],
+    
+  "web_accessible_resources": [
+    "popup.js", "main.js"
+  ]
+}
